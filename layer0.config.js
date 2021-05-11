@@ -7,7 +7,8 @@ if (process.env.RUN_LOCAL === 'true') {
 }
 
 module.exports = {
-  connector: '@layer0/next',backends: {
+  connector: '@layer0/next', 
+  backends: {
     graphql: {
         domainOrIp: process.env.GRAPHQL_BACKEND_DOMAIN,
         hostHeader: process.env.GRAPHQL_BACKEND_HOST_HEADER,
@@ -16,6 +17,6 @@ module.exports = {
         domainOrIp: process.env.LEGACY_WWW_BACKEND,
         hostHeader: process.env.LEGACY_WWW_BACKEND_HOST_HEADER,
     },
-},
+  },
 prerenderConcurrency: 5,
 };
